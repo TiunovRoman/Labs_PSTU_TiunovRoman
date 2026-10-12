@@ -5,26 +5,27 @@
 using namespace std;
 
 int main() {
-    double a = 100.0;
-    double b = 0.001;
+    setlocale(LC_ALL, ".65001"); // подключаем русскую локализацию
+    double a = 100.0; // задаем переменную double a 
+    double b = 0.001; // задаем переменную double b
 
-    float af = a;
-    float bf = b;
-    float p1 = (af - bf) * (af - bf) * (af - bf) * (af - bf);
+    float af = a; //копируем переменную из double
+    float bf = b; //копируем переменную из double
+    float p1 = (af - bf) * (af - bf) * (af - bf) * (af - bf);  //поэтапно считает пример
     float p2 = af * af * af * af - 4.0f * af * af * af * bf;
     float chisl1 = p1 - p2;
     float znam1 = 6.0f * af * af * bf * bf - 4.0f * af * bf * bf * bf + bf * bf * bf * bf;
-    float r1 = chisl1 / znam1;
+    float r1 = chisl1 / znam1; 
 
-    double dp1 = (a - b) * (a - b) * (a - b) * (a - b);
+    double dp1 = (a - b) * (a - b) * (a - b) * (a - b); //поэтапно считаем пример
     double dp2 = a * a * a * a - 4.0 * a * a * a * b;
     double chisl2 = dp1 - dp2;
     double znam2 = 6.0 * a * a * b * b - 4.0 * a * b * b * b + b * b * b * b;
     double r2 = chisl2 / znam2;
 
-    cout << fixed << setprecision(6);
-    cout << "float: " << r1 << endl;
-    cout << "double: " << r2 << endl;
+    cout << fixed << setprecision(6); //отключает экспоненциальную запись чисел
+    cout << "float: " << r1 << endl;  //вывод данных float
+    cout << "double: " << r2 << endl; //вывод данных double
 
     return 0;
 }

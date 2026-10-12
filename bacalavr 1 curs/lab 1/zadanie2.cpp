@@ -1,18 +1,21 @@
-// Тиунов Роман РИС-26-3б Вариант 22 Лабораторная 1 задание 2
+// Тиунов Роман РИС-26-36 Вариант 22 Лабораторная 1 задание 2
 #include <iostream>
+#include <clocale>
 
 using namespace std;
 
 int main() {
+    setlocale(LC_ALL, ".65001"); // подключаем русскую локализацию
     int n, m;
-    cout << "Vvedi celie chisla n i m: ";
+    cout << "Введи целый числа n и m: ";
     cin >> n >> m;
-
-    cout << "\nRezultati virazheniy dlya 22 varianta:" << endl;
+    cout << "\nРезультаты выражения:" << endl;
     cout << "1) ++n * ++m = " << (++n * ++m) << endl;
-    cout << "2) m++ < n   = " << (m++ < n) << endl;
-    cout << "3) n++ > m   = " << (n++ > m) << endl;
-
+    // префиксный инкремент увеличивает n и m до операции умножения
+    cout << "2) m++ < n  = " << (m++ < n) << endl;
+    // постфиксный инкремент у m срабатывает уже после сравнения
+    cout << "3) n++ > m  = " << (n++ > m) << endl;
+    // постфиксный инкремент у n срабатывает уже после сравнения
     return 0;
 }
 
