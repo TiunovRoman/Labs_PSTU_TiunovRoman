@@ -1,8 +1,8 @@
 // Тиунов Роман РИС-26-3б Вариант 22 Лабораторная 1 задание 1
-#include <iostream>
-#include <iomanip>
+#include <iostream> // подключаем библиотеку ввода-вывода
+#include <iomanip> // подключаем библиотеку для форматирования вывода
 
-using namespace std;
+using namespace std; // подключаем пространство имен std
 
 int main() {
     setlocale(LC_ALL, ".65001"); // подключаем русскую локализацию
@@ -12,7 +12,7 @@ int main() {
     float af = a; //копируем переменную из double
     float bf = b; //копируем переменную из double
     float p1 = (af - bf) * (af - bf) * (af - bf) * (af - bf);  //поэтапно считает пример
-    float p2 = af * af * af * af - 4.0f * af * af * af * bf;
+    float p2 = af * af * af * af - 4.0f * af * af * af * bf; 
     float chisl1 = p1 - p2;
     float znam1 = 6.0f * af * af * bf * bf - 4.0f * af * bf * bf * bf + bf * bf * bf * bf;
     float r1 = chisl1 / znam1; 
