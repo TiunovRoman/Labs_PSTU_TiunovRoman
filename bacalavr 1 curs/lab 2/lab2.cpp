@@ -5,7 +5,8 @@
 
 using namespace std;
 
-int main() {
+int main() 
+{
     setlocale(LC_ALL, ".65001"); // подключаем русскою локализацию
 
     long double s = 0;
@@ -13,11 +14,10 @@ int main() {
 
     // Начинаем с n = 2, так как при n = 1 ln(1) = 0 (деление на ноль)
     for (int n = 2; n < 2 + count; n++) {
-        long double an = pow(n, log(n)) / pow(log(n), n); // вычисление текущего члена ряда
+        long double an = pow(n, log(n)) / pow(log(n), n); // вычисление текущего члена ряда по формуле
         s += an; // суммирование элементов
     }
 
-    cout << "Результат:" << endl;
     cout << "Сумма 15 членов ряда = " << s << endl;
 
     return 0;
