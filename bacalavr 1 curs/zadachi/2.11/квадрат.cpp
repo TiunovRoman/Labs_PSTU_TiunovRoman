@@ -2,18 +2,22 @@
 using namespace std;
 
 int main() {
-    int n;
+    int i, j, n;
     cin >> n;
-    for (int i = 1; i <= n; ++i) {
-        if (i == 1 || i == n) {
-            for (int j = 1; j <= n; ++j) cout << "*";
-        } else {
-            for (int j = 1; j <= n; ++j) {
-                if (j == 1 || j == n) cout << "*";
-                else cout << " ";
-            }
+    for (i = 1; i <= n; i++) {
+        cout << "*";
+    }
+    cout << endl;
+    for (j = 1; j <= n - 2; j++) {
+        cout << "*";
+        for (int z = 1; z <= n - 2; z++) {
+            cout << " ";
         }
+        cout << "*";
         cout << endl;
+    }
+    for (i = 1; i <= n; i++) {
+        cout << "*";
     }
     return 0;
 }
